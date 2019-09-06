@@ -1,1 +1,4 @@
-include ':app'
+include ':default'
+include ':MyRepositoryPattern'
+include ':MyMVPPattern'
+include ':MyMVVMPattern'
