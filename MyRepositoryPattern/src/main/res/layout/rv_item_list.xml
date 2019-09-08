@@ -23,7 +23,8 @@
             android:layout_weight="1"
             android:paddingStart="10dp"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:text="마켓이름"/>
 
         <TextView
             android:id="@+id/tv_trade_price"
@@ -31,14 +32,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:gravity="right"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:text="2222"/>
 
         <TextView
             android:id="@+id/tv_signed_change_rate"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="right" />
+            android:gravity="right"
+            android:text="234234"/>
 
         <TextView
             android:id="@+id/tv_acc_trade_price_24h"
@@ -46,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
-            android:paddingEnd="10dp" />
+            android:paddingEnd="10dp"
+            android:text="12341234"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

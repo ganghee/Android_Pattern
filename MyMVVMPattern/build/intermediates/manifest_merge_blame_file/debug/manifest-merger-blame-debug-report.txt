@@ -15,7 +15,7 @@
 12        android:allowBackup="true"
 12-->/Users/ganghee/document/android/MyArchitecture/MyMVVMPattern/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.2] /Users/ganghee/.gradle/caches/transforms-2/files-2.1/f006d0fe6cd95e486c2d6b8858676606/core-1.0.2/AndroidManifest.xml:22:18-86
+13-->[androidx.core:core:1.1.0-rc03] /Users/ganghee/.gradle/caches/transforms-2/files-2.1/f8c8223867e727e126958fb6f535d946/core-1.1.0-rc03/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:extractNativeLibs="false"
 16        android:icon="@mipmap/ic_launcher"

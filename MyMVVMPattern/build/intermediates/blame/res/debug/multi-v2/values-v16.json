@@ -4,7 +4,17 @@
             "outputFile": "/Users/ganghee/document/android/MyArchitecture/MyMVVMPattern/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/c9e0875c5ee7e96a0d018964999dff69/appcompat-1.0.2/res/values-v16/values-v16.xml",
+                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/f8c8223867e727e126958fb6f535d946/core-1.1.0-rc03/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/f318865d342d7067259f250a450e756f/appcompat-1.1.0-rc01/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/f006d0fe6cd95e486c2d6b8858676606/core-1.0.2/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

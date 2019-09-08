@@ -1,6 +1,6 @@
 package com.example.mystudy.util
 
-import com.example.myarchitecture.R
+import com.example.myrepositorypattern.R
 
 object FormatText {
 
