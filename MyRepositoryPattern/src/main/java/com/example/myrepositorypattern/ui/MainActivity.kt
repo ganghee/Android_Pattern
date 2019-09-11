@@ -1,4 +1,4 @@
-package com.example.myarchitecture.ui
+package com.example.myrepositorypattern.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

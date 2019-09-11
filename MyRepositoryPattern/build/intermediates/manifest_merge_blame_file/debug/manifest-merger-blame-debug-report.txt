@@ -33,9 +33,9 @@
 22        android:testOnly="true"
 23        android:theme="@style/AppTheme" >
 23-->/Users/ganghee/document/android/MyArchitecture/MyRepositoryPattern/src/main/AndroidManifest.xml:14:9-40
-24        <activity android:name="com.example.myarchitecture.ui.MainActivity" >
+24        <activity android:name="com.example.myrepositorypattern.ui.MainActivity" >
 24-->/Users/ganghee/document/android/MyArchitecture/MyRepositoryPattern/src/main/AndroidManifest.xml:16:9-22:20
-24-->/Users/ganghee/document/android/MyArchitecture/MyRepositoryPattern/src/main/AndroidManifest.xml:16:19-76
+24-->/Users/ganghee/document/android/MyArchitecture/MyRepositoryPattern/src/main/AndroidManifest.xml:16:19-50
 25            <intent-filter>
 25-->/Users/ganghee/document/android/MyArchitecture/MyRepositoryPattern/src/main/AndroidManifest.xml:17:13-21:29
 26                <action android:name="android.intent.action.MAIN" />

@@ -7,10 +7,10 @@ import com.example.myrepositorypattern.data.FormatTickers
 import kotlinx.android.synthetic.main.rv_item_list.view.*
 
 class UpbitHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
-    val tvCoinName = itemView.tv_coin_name
-    val tvTradePrice = itemView.tv_trade_price
-    val tvSignedChangeRate = itemView.tv_signed_change_rate
-    val tvAccTradePrice24h = itemView.tv_acc_trade_price_24h
+    private val tvCoinName = itemView.tv_coin_name
+    private val tvTradePrice = itemView.tv_trade_price
+    private val tvSignedChangeRate = itemView.tv_signed_change_rate
+    private val tvAccTradePrice24h = itemView.tv_acc_trade_price_24h
 
     fun bind(ticker: FormatTickers){
         tvCoinName.text = ticker.toMarket

@@ -2,7 +2,7 @@ package com.example.myrepositorypattern.network
 
 
 import com.example.myrepositorypattern.data.FormatTickers
-import com.example.mystudy.util.FormatText
+import com.example.myrepositorypattern.util.FormatText
 import com.google.gson.annotations.SerializedName
 
 data class TickerResponse(

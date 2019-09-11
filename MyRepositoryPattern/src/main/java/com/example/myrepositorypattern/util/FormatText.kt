@@ -1,4 +1,4 @@
-package com.example.mystudy.util
+package com.example.myrepositorypattern.util
 
 import com.example.myrepositorypattern.R
 

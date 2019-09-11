@@ -1,4 +1,4 @@
-package com.example.myarchitecture.ui
+package com.example.myrepositorypattern.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -15,7 +15,6 @@ import com.example.myrepositorypattern.data.UpbitRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_upbit.*
-import kotlinx.coroutines.channels.ticker
 
 /**
  * A simple [Fragment] subclass.
