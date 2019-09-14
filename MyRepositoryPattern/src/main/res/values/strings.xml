@@ -2,7 +2,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="app_name">My코인헬퍼</string>
+    <string name="app_name">코인헬퍼repo</string>
     <string name="admob_app_key">ca-app-pub-3455486566753347~2819068799</string>
     <string name="admob_start_interstitial_key">ca-app-pub-3455486566753347/4239536643</string>
     <string name="admob_main_bottom_banner_key">ca-app-pub-3455486566753347/5783247637</string>

@@ -7,9 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.myarchitecture.R
 
-/**
- * A simple [Fragment] subclass.
- */
 class UpbitFragment : Fragment() {
 
     override fun onCreateView(
