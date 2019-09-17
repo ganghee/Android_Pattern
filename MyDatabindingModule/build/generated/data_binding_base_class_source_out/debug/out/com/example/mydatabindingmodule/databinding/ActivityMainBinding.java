@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.viewpager.widget.ViewPager;
 import com.example.mydatabindingmodule.R;
+import com.example.mydatabindingmodule.viewmodel.MainViewModel;
 import com.google.android.material.tabs.TabLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -21,11 +23,21 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final ViewPager viewPagerMain;
 
+  @Bindable
+  protected MainViewModel mVm;
+
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       TabLayout tabLayoutMain, ViewPager viewPagerMain) {
     super(_bindingComponent, _root, _localFieldCount);
     this.tabLayoutMain = tabLayoutMain;
     this.viewPagerMain = viewPagerMain;
+  }
+
+  public abstract void setVm(@Nullable MainViewModel vm);
+
+  @Nullable
+  public MainViewModel getVm() {
+    return mVm;
   }
 
   @NonNull
