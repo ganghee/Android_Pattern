@@ -1,7 +1,6 @@
 package com.example.mymvppattern.ui
 
 import com.example.mymvppattern.data.FormatTickers
-import com.example.mymvppattern.util.FormatText
 
 interface UpbitContract {
     interface View : BaseView<Presenter> {

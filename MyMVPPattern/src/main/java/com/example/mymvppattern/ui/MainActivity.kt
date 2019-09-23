@@ -1,12 +1,10 @@
 package com.example.mymvppattern.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mymvppattern.R
 import com.example.mymvppattern.adapter.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_upbit.*
 
 class MainActivity : AppCompatActivity() {
 

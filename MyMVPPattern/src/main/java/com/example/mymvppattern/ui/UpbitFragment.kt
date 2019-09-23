@@ -2,20 +2,16 @@ package com.example.mymvppattern.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.mymvppattern.R
 import com.example.mymvppattern.adapter.TickerAdpater
 import com.example.mymvppattern.data.FormatTickers
 import com.example.mymvppattern.data.UpbitRepository
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_upbit.*
 import org.jetbrains.anko.support.v4.toast
 
@@ -51,11 +47,9 @@ class UpbitFragment : Fragment(), UpbitContract.View {
             )
         presenter.getTicker(firstMarket)
 
-
     }
 
     private fun recyclerviewSetup() {
-
 
         rv_tickers.apply {
             adapter = tickerAdapter

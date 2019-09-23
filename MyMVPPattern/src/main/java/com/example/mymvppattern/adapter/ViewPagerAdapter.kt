@@ -3,7 +3,6 @@ package com.example.mymvppattern.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import androidx.viewpager.widget.PagerAdapter
 import com.example.mymvppattern.ui.UpbitFragment
 
 class ViewPagerAdapter(fm: FragmentManager,private val viewpagerNum: Int) : FragmentStatePagerAdapter(

@@ -24,7 +24,9 @@ class UpbitPresenter(
                         }
                     }
                     .subscribe({
-                        tickerView.showUpbitTickerList(it.map { it.toTicker() })
+                        tickerView.showUpbitTickerList(
+                            it.map {
+                                it.toTicker() })
                     },
                         {
                             tickerView.showFailedUpbitTickerList()
