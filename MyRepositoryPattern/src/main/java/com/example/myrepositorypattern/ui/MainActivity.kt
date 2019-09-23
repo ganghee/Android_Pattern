@@ -1,7 +1,7 @@
 package com.example.myrepositorypattern.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.myrepositorypattern.R
 import com.example.myrepositorypattern.adapter.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*

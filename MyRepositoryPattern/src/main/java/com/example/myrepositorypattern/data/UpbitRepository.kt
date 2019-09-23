@@ -1,10 +1,7 @@
 package com.example.myrepositorypattern.data
 
-import android.util.Log
 import com.example.myrepositorypattern.data.repository.UpbitRemoteDataSource
-import io.reactivex.Scheduler
 import io.reactivex.Single
-import io.reactivex.schedulers.Schedulers
 
 /**
  * 가져온 데이터를 가공하는 클래스

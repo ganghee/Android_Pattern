@@ -1,14 +1,13 @@
 package com.example.myrepositorypattern.data.repository
 
-import android.util.Log
 import com.example.myrepositorypattern.network.MarketResponse
 import com.example.myrepositorypattern.network.UpbitApi
-import io.reactivex.Scheduler
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+
 /**
  *  https://docs.upbit.com/v1.0.6/reference#%EC%8B%9C%EC%84%B8-%EC%A2%85%EB%AA%A9-%EC%A1%B0%ED%9A%8C
  **/
