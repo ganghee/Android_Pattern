@@ -4,7 +4,7 @@
             "outputFile": "/Users/ganghee/project/android/MyArchitecture/MyRepositoryPattern/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/5fc33b7e3efb9f43823b4bd880e1f39f/appcompat-1.1.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/cb892f1215385eb8252179ca2be487fc/appcompat-1.1.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/313cbe82b4dd0a06647b282cab17ba4b/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/ganghee/.gradle/caches/transforms-2/files-2.1/66f40add384b5849a6c456baf8c14b80/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
