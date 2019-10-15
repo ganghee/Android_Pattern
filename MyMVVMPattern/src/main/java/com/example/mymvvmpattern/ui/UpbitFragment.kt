@@ -8,19 +8,14 @@ import com.example.mymvvmpattern.R
 import com.example.mymvvmpattern.base.BaseFragment
 import com.example.mymvvmpattern.base.BaseRecyclerViewAdapter
 import com.example.mymvvmpattern.data.FormatTickers
-import com.example.mymvvmpattern.data.UpbitRepository
-import com.example.mymvvmpattern.data.remote.UpbitRemoteDataSource
 import com.example.mymvvmpattern.databinding.FragmentUpbitBinding
 import com.example.mymvvmpattern.databinding.RvItemListBinding
 import com.example.mymvvmpattern.viewmodel.UpbitViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class UpbitFragment : BaseFragment<FragmentUpbitBinding>(R.layout.fragment_upbit) {
 
-    private val upbitViewModel by lazy {
-        UpbitViewModel(
-            UpbitRepository.getInstance(UpbitRemoteDataSource)
-        )
-    }
+    private val upbitViewModel: UpbitViewModel by viewModel()
 
     @SuppressLint("CheckResult")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -37,7 +32,7 @@ class UpbitFragment : BaseFragment<FragmentUpbitBinding>(R.layout.fragment_upbit
             rvTickers.adapter =
                 object : BaseRecyclerViewAdapter<FormatTickers, RvItemListBinding>(
                     layoutRes = R.layout.rv_item_list,
-                    bindingVariableId = BR.item
+                    bindingId = BR.item
                 ) {}
         }
     }

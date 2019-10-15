@@ -79,11 +79,11 @@ public class FragmentUpbitBindingImpl extends FragmentUpbitBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeVmTickerList((androidx.databinding.ObservableField<java.util.List<com.example.mymvvmpattern.data.FormatTickers>>) object, fieldId);
+                return onChangeVmTickerList((androidx.lifecycle.MutableLiveData<java.util.List<com.example.mymvvmpattern.data.FormatTickers>>) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeVmTickerList(androidx.databinding.ObservableField<java.util.List<com.example.mymvvmpattern.data.FormatTickers>> VmTickerList, int fieldId) {
+    private boolean onChangeVmTickerList(androidx.lifecycle.MutableLiveData<java.util.List<com.example.mymvvmpattern.data.FormatTickers>> VmTickerList, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -101,8 +101,8 @@ public class FragmentUpbitBindingImpl extends FragmentUpbitBinding  {
             mDirtyFlags = 0;
         }
         com.example.mymvvmpattern.viewmodel.UpbitViewModel vm = mVm;
-        java.util.List<com.example.mymvvmpattern.data.FormatTickers> vmTickerListGet = null;
-        androidx.databinding.ObservableField<java.util.List<com.example.mymvvmpattern.data.FormatTickers>> vmTickerList = null;
+        java.util.List<com.example.mymvvmpattern.data.FormatTickers> vmTickerListGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.util.List<com.example.mymvvmpattern.data.FormatTickers>> vmTickerList = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -112,19 +112,19 @@ public class FragmentUpbitBindingImpl extends FragmentUpbitBinding  {
                     // read vm.tickerList
                     vmTickerList = vm.getTickerList();
                 }
-                updateRegistration(0, vmTickerList);
+                updateLiveDataRegistration(0, vmTickerList);
 
 
                 if (vmTickerList != null) {
-                    // read vm.tickerList.get()
-                    vmTickerListGet = vmTickerList.get();
+                    // read vm.tickerList.getValue()
+                    vmTickerListGetValue = vmTickerList.getValue();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            com.example.mymvvmpattern.util.AdapterUtilKt.replaceAll(this.rvTickers, vmTickerListGet);
+            com.example.mymvvmpattern.util.AdapterUtilKt.replaceAll(this.rvTickers, vmTickerListGetValue);
         }
     }
     // Listener Stub Implementations

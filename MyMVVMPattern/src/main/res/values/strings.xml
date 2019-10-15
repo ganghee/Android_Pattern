@@ -52,4 +52,10 @@
 
     <string name="test_text">테스트글자</string>
     <string name="test_number">1234.5678</string>
+    <string name="title">Title</string>
+    <string name="description">description</string>
+    <string name="priority">priority</string>
+    <string name="udt">UDT</string>
+    <string name="_1234_1234">1234.1234%</string>
+    <string name="_1234_4">1234_4</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.example.mymvvmpattern.data
 
 import com.example.mymvvmpattern.data.remote.UpbitRemoteDataSource
-import com.example.mymvvmpattern.network.UpbitService
+import com.example.mymvvmpattern.data.remote.UpbitService
 import io.reactivex.Single
 
 /**
@@ -9,10 +9,10 @@ import io.reactivex.Single
  **/
 
 class UpbitRepository(
-    private val upbitService: UpbitService
+    private val upbitRemoteDataSource: UpbitRemoteDataSource
 ) {
     fun getMarket(): Single<String> =
-        upbitService.getMarkets()
+        upbitRemoteDataSource.getMarkets()
             .map {
                 it.joinToString(",") {
                     it.market
@@ -20,15 +20,6 @@ class UpbitRepository(
             }
 
     fun getTicker(marketList: String) =
-        UpbitRemoteDataSource.getTickers(marketList)
+        upbitRemoteDataSource.getTickers(marketList)
 
-    companion object {
-        private var INSTANCE: UpbitRepository? = null
-
-        fun getInstance(
-            upbitService: UpbitService
-        ): UpbitRepository = INSTANCE?.let { it } ?: UpbitRepository(upbitService).apply {
-            INSTANCE = this
-        }
-    }
 }

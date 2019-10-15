@@ -1,24 +1,27 @@
 package com.example.mymvvmpattern.viewmodel
 
 import android.util.Log
-import androidx.databinding.ObservableField
+import androidx.lifecycle.MutableLiveData
 import com.example.mymvvmpattern.base.BaseViewModel
 import com.example.mymvvmpattern.data.FormatTickers
 import com.example.mymvvmpattern.data.UpbitRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 
 class UpbitViewModel(
     private val repository: UpbitRepository
 ) : BaseViewModel() {
 
-    val tickerList = ObservableField<List<FormatTickers>>()
+    val tickerList = MutableLiveData<List<FormatTickers>>()
 
     fun getTicker(firstMarket: String?) {
         repository.getMarket()
             .observeOn(Schedulers.newThread())
-            .subscribe { it ->
+            .subscribe({ it ->
                 repository.getTicker(it)
+                    .repeatWhen { it.delay(5, TimeUnit.SECONDS) }
                     .observeOn(AndroidSchedulers.mainThread())
                     .map {
                         it.filter { TickerResponse ->
@@ -26,11 +29,13 @@ class UpbitViewModel(
                         }
                     }
                     .subscribe({
-                        tickerList.set(it.map { it.toTicker() })
+                        tickerList.postValue(it.map { it.toTicker() })
                     }, {
                         showFailedUpbitTickerList()
                     })
-            }.also { compositeDisposable.add(it) }
+            }, {
+                Log.d("errorlog", "%%%" + it.printStackTrace())
+            }).also { compositeDisposable.add(it) }
     }
 
     private fun showFailedUpbitTickerList() {

@@ -96,38 +96,17 @@ public class RvItemListBindingImpl extends RvItemListBinding  {
             mDirtyFlags = 0;
         }
         com.example.mymvvmpattern.data.FormatTickers item = mItem;
-        int itemToRateColor = 0;
-        java.lang.String itemToAccTradePrice24h = null;
-        java.lang.String itemToSignedChangeRate = null;
-        java.lang.String itemToMarket = null;
-        java.lang.String itemToTradePrice = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
-
-
-
-                if (item != null) {
-                    // read item.toRateColor
-                    itemToRateColor = item.getToRateColor();
-                    // read item.toAccTradePrice24h
-                    itemToAccTradePrice24h = item.getToAccTradePrice24h();
-                    // read item.toSignedChangeRate
-                    itemToSignedChangeRate = item.getToSignedChangeRate();
-                    // read item.toMarket
-                    itemToMarket = item.getToMarket();
-                    // read item.toTradePrice
-                    itemToTradePrice = item.getToTradePrice();
-                }
         }
         // batch finished
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccTradePrice24h, itemToAccTradePrice24h);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvCoinName, itemToMarket);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvSignedChangeRate, itemToSignedChangeRate);
-            this.tvSignedChangeRate.setTextColor(itemToRateColor);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvTradePrice, itemToTradePrice);
+            com.example.mymvvmpattern.util.AdapterUtilKt.setTradePrice24th(this.tvAccTradePrice24h, item);
+            com.example.mymvvmpattern.util.AdapterUtilKt.setMarket(this.tvCoinName, item);
+            com.example.mymvvmpattern.util.AdapterUtilKt.setChangeRate(this.tvSignedChangeRate, item);
+            com.example.mymvvmpattern.util.AdapterUtilKt.setTradePrice(this.tvTradePrice, item);
         }
     }
     // Listener Stub Implementations

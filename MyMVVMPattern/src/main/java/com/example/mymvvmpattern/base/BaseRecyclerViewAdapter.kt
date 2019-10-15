@@ -6,17 +6,18 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseRecyclerViewAdapter<ITEM : Any, B : ViewDataBinding>(
-    @LayoutRes private val layoutRes: Int,
-    private val bindingVariableId: Int? = null
+    @LayoutRes
+    private val layoutRes: Int,
+    private val bindingId: Int? = null
 ) : RecyclerView.Adapter<BaseViewHolder<B>>() {
 
     private val items = mutableListOf<ITEM>()
 
     fun replaceAll(items: List<ITEM>?) {
-        items?.let {
+        if (items != null) {
             this.items.run {
                 clear()
-                addAll(it)
+                addAll(items)
             }
         }
     }
@@ -25,12 +26,12 @@ abstract class BaseRecyclerViewAdapter<ITEM : Any, B : ViewDataBinding>(
         object : BaseViewHolder<B>(
             layoutRes = layoutRes,
             parent = parent,
-            bindingVariableId = bindingVariableId
+            bindingId = bindingId
         ) {}
 
     override fun getItemCount(): Int = items.size
 
-    override fun onBindViewHolder(holder: BaseViewHolder<B>, position: Int) {
+    override fun onBindViewHolder(holder: BaseViewHolder<B>, position: Int) =
         holder.onBindViewHolder(items[position])
-    }
+
 }
