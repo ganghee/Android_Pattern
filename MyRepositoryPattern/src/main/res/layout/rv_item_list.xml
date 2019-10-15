@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
+            android:textColor="@color/black"
             android:paddingEnd="10dp"
             android:text="12341234"/>
     </LinearLayout>

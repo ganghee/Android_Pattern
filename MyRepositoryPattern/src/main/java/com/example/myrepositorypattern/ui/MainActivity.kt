@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureMainTab() {
-        viewpager_main.adapter = ViewPagerAdapter(supportFragmentManager,4)
+        viewpager_main.adapter = ViewPagerAdapter(supportFragmentManager)
 
         with(tablayout_main){
             setupWithViewPager(viewpager_main)
