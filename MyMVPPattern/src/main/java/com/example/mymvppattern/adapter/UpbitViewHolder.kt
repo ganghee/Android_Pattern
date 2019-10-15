@@ -18,6 +18,5 @@ class UpbitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         tvSignedChangeRate.text = item.toSignedChangeRate
         tvTradePrice.text = item.toTradePrice
         tvSignedChangeRate.setTextColor(ContextCompat.getColor(itemView.context, item.toRateColor))
-
     }
 }
