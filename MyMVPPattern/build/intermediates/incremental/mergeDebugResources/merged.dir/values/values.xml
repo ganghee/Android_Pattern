@@ -178,6 +178,7 @@
     <attr format="reference" name="materialThemeOverlay"/>
     <attr format="dimension" name="minTouchTargetSize"/>
     <attr format="reference" name="navigationViewStyle"/>
+    <attr format="reference" name="recyclerViewStyle"/>
     <attr format="color" name="rippleColor"/>
     <attr format="color|reference" name="scrimBackground"/>
     <attr format="reference" name="shapeAppearanceLargeComponent"/>
@@ -534,6 +535,7 @@
     <dimen name="mtrl_btn_text_btn_padding_right">8dp</dimen>
     <dimen name="mtrl_btn_text_size">14sp</dimen>
     <dimen name="mtrl_btn_z">0dp</dimen>
+    <dimen name="mtrl_calendar_action_height">52dp</dimen>
     <dimen name="mtrl_calendar_action_padding">8dp</dimen>
     <dimen name="mtrl_calendar_bottom_padding">0dp</dimen>
     <dimen name="mtrl_calendar_content_padding">12dp</dimen>
@@ -554,7 +556,8 @@
     <dimen name="mtrl_calendar_header_text_padding">12dp</dimen>
     <dimen name="mtrl_calendar_header_toggle_margin_bottom">8dp</dimen>
     <dimen name="mtrl_calendar_header_toggle_margin_top">24dp</dimen>
-    <dimen name="mtrl_calendar_maximum_default_fullscreen_width">480dp</dimen>
+    <dimen name="mtrl_calendar_landscape_header_width">0dp</dimen>
+    <dimen name="mtrl_calendar_maximum_default_fullscreen_minor_axis">480dp</dimen>
     <dimen name="mtrl_calendar_month_horizontal_padding">2dp</dimen>
     <dimen name="mtrl_calendar_month_vertical_padding">0dp</dimen>
     <dimen name="mtrl_calendar_navigation_bottom_padding">4dp</dimen>
@@ -3035,12 +3038,14 @@
     <item name="cornerSizeBottomLeft">0dp</item>
   </style>
     <style name="ShapeAppearanceOverlay.MaterialComponents.Chip" parent="">
-    <!-- Replace with 50% -->
-    <item name="cornerSize">16dp</item>
+    <item name="cornerSize">50%</item>
+  </style>
+    <style name="ShapeAppearanceOverlay.MaterialComponents.ExtendedFloatingActionButton" parent="">
+    <!-- TODO(b/121352029): ExtendedFloatingActionButton adds 1px to the height -->
+    <item name="cornerSize">@null</item>
   </style>
     <style name="ShapeAppearanceOverlay.MaterialComponents.FloatingActionButton" parent="">
-    <!-- use @null to change to 50% programmatically. -->
-    <item name="cornerSize">@null</item>
+    <item name="cornerSize">50%</item>
   </style>
     <style name="ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day" parent="">
     <item name="cornerSize">@dimen/mtrl_calendar_day_corner</item>
@@ -4080,7 +4085,7 @@
     <item name="iconTint">@color/mtrl_extended_fab_text_color_selector</item>
     <item name="rippleColor">@color/mtrl_extended_fab_ripple_color</item>
     <item name="shapeAppearanceOverlay">
-      @style/ShapeAppearanceOverlay.MaterialComponents.FloatingActionButton
+      @style/ShapeAppearanceOverlay.MaterialComponents.ExtendedFloatingActionButton
     </item>
   </style>
     <style name="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
@@ -4221,6 +4226,7 @@
     <item name="itemFillColor">?attr/colorPrimary</item>
     <item name="itemTextColor">?attr/colorOnPrimary</item>
     <item name="itemStrokeColor">?attr/colorOnPrimary</item>
+    <item name="itemStrokeWidth">0dp</item>
   </style>
     <style name="Widget.MaterialComponents.MaterialCalendar.Year.Today" parent="Widget.MaterialComponents.MaterialCalendar.Year">
     <item name="itemStrokeColor">@color/material_on_surface_emphasis_high_type</item>
@@ -5178,10 +5184,14 @@
     <attr format="integer" name="maxCharacterCount"/>
     <attr format="integer" name="number"/>
     <attr name="badgeGravity">
-      <enum name="TOP_END" value="0"/>
-      <enum name="TOP_START" value="1"/>
-      <enum name="BOTTOM_END" value="2"/>
-      <enum name="BOTTOM_START" value="3"/>
+      <!-- Gravity.TOP | Gravity.END -->
+      <enum name="TOP_END" value="8388661"/>
+      <!-- Gravity.TOP | Gravity.START -->
+      <enum name="TOP_START" value="8388659"/>
+      <!-- Gravity.BOTTOM | Gravity.END -->
+      <enum name="BOTTOM_END" value="8388693"/>
+      <!-- Gravity.BOTTOM | Gravity.START -->
+      <enum name="BOTTOM_START" value="8388691"/>
     </attr>
   </declare-styleable>
     <declare-styleable name="BottomAppBar">
@@ -6396,7 +6406,7 @@
     <declare-styleable name="RecyclerView">
         <!-- Class name of the Layout Manager to be used.
         <p/>
-        The class must extandroidx.recyclerview.widget.RecyclerViewView$LayoutManager
+        The class must ext androidx.recyclerview.widget.RecyclerViewView$LayoutManager
         and have either a default constructor or constructor with the signature
         (android.content.Context, android.util.AttributeSet, int, int).
          <p/>
@@ -6412,6 +6422,7 @@
 
         <attr name="android:orientation"/>
         <attr name="android:descendantFocusability"/>
+        <attr name="android:clipToPadding"/>
         <attr format="integer" name="spanCount"/>
         <attr format="boolean" name="reverseLayout"/>
         <attr format="boolean" name="stackFromEnd"/>
@@ -6467,15 +6478,15 @@
     </declare-styleable>
     <declare-styleable name="ShapeAppearance">
     <!-- Corner size to be used in the ShapeAppearance. All corners default to this value -->
-    <attr format="dimension" name="cornerSize"/>
+    <attr format="dimension|fraction" name="cornerSize"/>
     <!-- Top left corner size to be used in the ShapeAppearance. -->
-    <attr format="dimension" name="cornerSizeTopLeft"/>
+    <attr format="dimension|fraction" name="cornerSizeTopLeft"/>
     <!-- Top right corner size to be used in the ShapeAppearance. -->
-    <attr format="dimension" name="cornerSizeTopRight"/>
+    <attr format="dimension|fraction" name="cornerSizeTopRight"/>
     <!-- Bottom right corner size to be used in the ShapeAppearance. -->
-    <attr format="dimension" name="cornerSizeBottomRight"/>
+    <attr format="dimension|fraction" name="cornerSizeBottomRight"/>
     <!-- Bottom left corner size to be used in the ShapeAppearance. -->
-    <attr format="dimension" name="cornerSizeBottomLeft"/>
+    <attr format="dimension|fraction" name="cornerSizeBottomLeft"/>
 
     <!-- Corner family to be used in the ShapeAppearance. All corners default to this value -->
     <attr format="enum" name="cornerFamily">

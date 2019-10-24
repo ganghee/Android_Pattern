@@ -1,15 +1,15 @@
 # 🌼 Android Architecture 🌼
-  - [1차 Study](#-1차-Study) - MVC
-  - [2차 Study](#1%ec%b0%a8-study) - Repository
-  - [3차 Study](#3%ec%b0%a8-study) - MVP
-  - [4차 Study](#4%ec%b0%a8-study) - MVP
-  - [5차 Study](#5%ec%b0%a8-study) - DataBinding
-  - [6차 Study](#6%ec%b0%a8-study) - MVVM
-  - [7차 Study](#7%ec%b0%a8-study) - MVVM
-  - [8차 Study](#8%ec%b0%a8-study) - AAC LiveData, AAC ViewModel
-  - [9차 Study](#9%ec%b0%a8-study) - Koin
+  - [1차 Study](#-1차-study) - MVC
+  - [2차 Study](#-2차-study) - Repository
+  - [3차 Study](#-3차-study) - MVP
+  - [4차 Study](#-4차-study) - MVP
+  - [5차 Study](#-5차-study) - DataBinding
+  - [6차 Study](#-6차-study) - MVVM
+  - [7차 Study](#-7차-study) - MVVM
+  - [8차 Study](#-8차-study) - AAC LiveData, AAC ViewModel
+  - [9차 Study](#-9차-study) - Koin
 ------------
-<img src="/https://i.imgflip.com/3dngez.gif" width="200" height="370"/>
+<img src="https://i.imgflip.com/3dngez.gif" width="200" height="370"/>
 
 ------------
 
