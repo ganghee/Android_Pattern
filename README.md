@@ -19,9 +19,9 @@
 - 하나의 MainActivity와 4개의 Fragment 구현
 - Retrofit을 이용하여 서버통신
 - [QUOTATION API](https://docs.upbit.com/reference#%EC%8B%9C%EC%84%B8-%EC%A2%85%EB%AA%A9-%EC%A1%B0%ED%9A%8C)
-# 
-# 
-# 
+  ###
+  ###
+  ###
     >❗️**ISSUE**
     > - 프레그먼트 4개를 각각 만들었다 하나의 프레그먼트를 재활용하는 방법은 없을까? [해결](https://github.com/ganghee/Android_Pattern/issues/3)
     > - tickers를 가져올 때 market이름을 하드코딩해서 10개만 가져왔다. 하드코딩하지 않는 방법은? [해결](https://github.com/ganghee/Android_Pattern/issues/4)
