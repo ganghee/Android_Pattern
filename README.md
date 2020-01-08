@@ -33,6 +33,7 @@
     > - 프레그먼트 4개를 각각 만들었다 하나의 프레그먼트를 재활용하는 방법은 없을까? [해결](https://github.com/ganghee/Android_Pattern/issues/3)
     > - tickers를 가져올 때 market이름을 하드코딩해서 10개만 가져왔다. 하드코딩하지 않는 방법은? [해결](https://github.com/ganghee/Android_Pattern/issues/4)
     > - text의 색이 바뀌지 않는다. [해결](https://github.com/ganghee/Android_Pattern/issues/5)
+    
 \
 \
 \
@@ -58,6 +59,7 @@
     > - ViewHolder와 Data Class는 변수형이 var인가 val인가? [해결](https://github.com/ganghee/Android_Pattern/issues/7)
     > - Adapter의 파라미터로 context가 필요한가? [해결](https://github.com/ganghee/Android_Pattern/issues/8)
     > - RecyclerView setup하는 시점은 언제인가? [해결](https://github.com/ganghee/Android_Pattern/issues/9)
+    
 \
 \
 \
