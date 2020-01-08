@@ -88,6 +88,7 @@
     >❗️**ISSUE**
     >- interface method를 만들 때 많이 만드는 것이 좋을까? [해결](https://github.com/ganghee/Android_Pattern/issues/10)
     >- Fragment를 생성할 때 파라미터에 데이터를 전송하지 않고 bundle로 데이터 전송하는 방법이 있을까? [해결](https://github.com/ganghee/Android_Pattern/issues/11)
+    
 \
 \
 \
@@ -223,6 +224,7 @@
 
     >❗️**ISSUE**
     >- 색상 값이 binding되지 않는다 [해결](https://github.com/ganghee/Android_Pattern/issues/18)
+    
 \
 \
 \
