@@ -12,8 +12,15 @@
 <img src="https://i.imgflip.com/3dngez.gif" width="200" height="370"/>
 
 ------------
-
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 
 ## 🌸1차 Study
 - 하나의 MainActivity와 4개의 Fragment 구현
@@ -26,8 +33,15 @@
     > - 프레그먼트 4개를 각각 만들었다 하나의 프레그먼트를 재활용하는 방법은 없을까? [해결](https://github.com/ganghee/Android_Pattern/issues/3)
     > - tickers를 가져올 때 market이름을 하드코딩해서 10개만 가져왔다. 하드코딩하지 않는 방법은? [해결](https://github.com/ganghee/Android_Pattern/issues/4)
     > - text의 색이 바뀌지 않는다. [해결](https://github.com/ganghee/Android_Pattern/issues/5)
-
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 
 ## 🌸 2차 Study
 - **Android Repository Pattern**
@@ -44,9 +58,15 @@
     > - ViewHolder와 Data Class는 변수형이 var인가 val인가? [해결](https://github.com/ganghee/Android_Pattern/issues/7)
     > - Adapter의 파라미터로 context가 필요한가? [해결](https://github.com/ganghee/Android_Pattern/issues/8)
     > - RecyclerView setup하는 시점은 언제인가? [해결](https://github.com/ganghee/Android_Pattern/issues/9)
-
-
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 ## 🌸 3차, 4차 Study
 - **Model**: 데이터, 상태, 비즈니스 로직을 담당
 
@@ -66,9 +86,15 @@
     >❗️**ISSUE**
     >- interface method를 만들 때 많이 만드는 것이 좋을까? [해결](https://github.com/ganghee/Android_Pattern/issues/10)
     >- Fragment를 생성할 때 파라미터에 데이터를 전송하지 않고 bundle로 데이터 전송하는 방법이 있을까? [해결](https://github.com/ganghee/Android_Pattern/issues/11)
-
-
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 ## 🌸 5차 Study
 - Databinding : 프로그래매틱 방식이 아니라 선언적 형식으로 레이아웃의 UI 구성요소를 앱의 데이터 소스와 결합할 수 있는 지원 라이브러리
 - @{} 형식을 통해 findViewById를 구현할 필요가 없다.
@@ -97,7 +123,15 @@
     >- 함수의 파라미터가 길 때 구현 방법 [해결](https://github.com/ganghee/Android_Pattern/issues/13)
     >- run, let, apply, also 도대체 이것들을 잘 사용할 수 있을까? [해결](https://github.com/ganghee/Android_Pattern/issues/14)
 
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 ## 🌸 6차, 7차 Study
 - `MVVM`: MVVM은 Model-View-ViewModel의 약자이다. Model은 UI에 표시될 데이터 와 비즈니스 로직을 담당하고 View는 UI를 의미하며 ViewModel은 이벤트 처리나, Model과의 인터랙션 등을 담당한다.
 ![](https://raw.githubusercontent.com/wiki/android/architecture-samples/images/mvvm-databinding.png)
@@ -112,7 +146,15 @@
     >- lateinit과 lazy 초기화 중 어느것을 써야할까? [해결](https://github.com/ganghee/Android_Pattern/issues/16)
     >- compositeDisposable을 ViewModel에서 생명주기를 고려해 어느곳에 구현해야 할까? [해결](https://github.com/ganghee/Android_Pattern/issues/17)
 
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 ## 🌸 8차 Study
 - **AAC ViewModel**
     - ViewModel 클래스는 UI 관련 데이터를 저장하고 관리하기 위해 설계되었습니다. 즉, 스크린 회전 같은 상태 변화에도 데이터가 보존될 수 있도록 허용해줍니다. 
@@ -179,7 +221,15 @@
 
     >❗️**ISSUE**
     >- 색상 값이 binding되지 않는다 [해결](https://github.com/ganghee/Android_Pattern/issues/18)
-
+\
+\
+\
+\
+\
+\
+\
+\
+[]()
 
 ## 🌸 9차 Study
 - Koin
